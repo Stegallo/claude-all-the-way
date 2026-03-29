@@ -1,12 +1,6 @@
 import random
 
-
-def add(a: int, b: int) -> int:
-    return a + b
-
-
-def mul(a: int, b: int) -> int:
-    return a * b
+from python_project.operations import add, mul
 
 
 def main():
