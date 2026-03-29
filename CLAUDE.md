@@ -11,6 +11,15 @@ A Python 3.14 project managed with `uv`.
 - `src/python_project/` — application source code
 - `tests/` — pytest test files mirroring the src layout
 
+## Code Style
+
+- Always use type hints on all function parameters, return types, and non-obvious variables.
+
+## Testing
+
+- Add or update tests in `tests/` for every code change.
+- Run `uv run pytest` after changes — all tests must pass before the task is done.
+
 ## Commands
 
 ```bash
