@@ -10,6 +10,18 @@
             "statusMessage": "Running ruff..."
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "agent",
+            "if": "Bash(git commit:*)",
+            "prompt": "A git commit was just made. Check if README.md needs updating to stay consistent with the committed changes: run `git diff HEAD~1 HEAD` to see what changed, then read README.md. If the commit affected anything documented there (commands, dependencies, entry points, project structure, prerequisites), update README.md accordingly. Only make changes if something is genuinely outdated or missing — do not change the README if it is already accurate.",
+            "statusMessage": "Checking README consistency...",
+            "timeout": 120
+          }
+        ]
       }
     ]
   }
